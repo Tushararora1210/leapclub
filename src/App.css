@@ -28,7 +28,7 @@ body{
 }
 .card>.front,.card>.vanished
 {
-  width:15vw;
+  width:12vw;
   border:1px solid black;
   height:100px;
   text-align: center;
@@ -41,7 +41,7 @@ top:40px;
 }
 .matchedcount
 {
-  width:22vw;
+  width:20vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -78,7 +78,8 @@ top:40px;
 .menupage>h1
 {
   position: relative;
-  left:10vw;
+  left:15vw;
+  right:15vw;
   font-style: italic;
   color: azure;
   text-shadow: 4px 4px black;
@@ -92,7 +93,7 @@ top:40px;
 }
 .clickedcount
 {
-  width:22vw;
+  width:20vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
