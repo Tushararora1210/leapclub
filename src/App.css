@@ -80,6 +80,7 @@ top:40px;
   position: relative;
   left:15vw;
   right:15vw;
+  font-size: 3.2vw;
   font-style: italic;
   color: azure;
   text-shadow: 4px 4px black;
@@ -89,6 +90,8 @@ top:40px;
   color:wheat;
   position: relative;
   font-style: italic;
+  font-weight: bolder;
+  font-size: min(2vw,5vh);
 
 }
 .clickedcount
