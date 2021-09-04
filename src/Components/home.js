@@ -4,6 +4,7 @@ function Home()
 {
 
     const [clickedcard,setClickedcard]=useState([]);
+    const [totalclicks,setTotalclicks]=useState(0);
     const [matched,setMatched]=useState([]);
     const [isshuffleexecuted,setIsshuffleexecuted]=useState(false);
     const [cards,setCards]=useState([]);
@@ -43,12 +44,16 @@ function Home()
         }
         setTimeout(()=>{
             setClickedcard([]);
-        },300)
+        },500)
     }, [clickedcard])
    
     return(
         <div className="homepage">
             <div className="matchedcount">
+                <div className="matchedcountlayout">
+                <h2>Total <br/> Matched Counts</h2>
+                <h2>{matched.length}</h2>
+                </div>
             </div>
     <div className="home">
         {cards.map((val,index)=>
@@ -63,9 +68,14 @@ function Home()
                 {
                     isVanished=true;
                 }
+                
             return(<div className={isFlipped?"flip":""} onClick={()=>{
-                if(!isVanished && !isFlipped )
-                   setClickedcard([...clickedcard,index])
+                if(!isVanished && !isFlipped && clickedcard.length<2)
+                {
+                    setClickedcard([...clickedcard,index])
+                    setTotalclicks(totalclicks+1);
+                }
+
             }}>
 
                 {<Card number={val.value} flip={isFlipped} vanish={isVanished} key={index}  />}
@@ -76,7 +86,12 @@ function Home()
        
     
     </div>
-    <div className="clickedcount">             </div>
+    <div className="clickedcount"> 
+    <div className="clickedcountlayout">
+    <h2>Total <br/> Clicked Counts</h2>
+    <h2>{totalclicks}</h2>
+    </div>
+    </div>
     </div>
 
     )

@@ -1,3 +1,8 @@
+body{
+  background-image: url("./images/backgroundimg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 .card
 {
   border:2px solid black;
@@ -13,6 +18,8 @@
 
   transform: scale(1.2);
 }
+
+
 .home
 {
   display: flex;
@@ -36,6 +43,15 @@ top:40px;
   width:22vw;
   
 }
+.matchedcountlayout,.clickedcountlayout
+{
+  background-color:red;
+  border-radius: 50%;
+  text-align: center;
+  color: azure;
+  font-style: italic;
+  font-size: max(1vw,8px);
+}
 .clickedcount
 {
   width:22vw;
@@ -47,10 +63,15 @@ top:40px;
 }
 .flip
 {
-  animation: rotateimage 0.5s linear;
+  animation: rotateimage 0.2s  ease-in;
+
+}
+.hide
+{
+  display: none;
 }
 @keyframes rotateimage{
-0% {transform:rotate(0deg);}
+0% {transform:rotateY(0deg);}
 
-100% {transform:rotate(360deg);}
+100% {transform:rotateY(360deg);}
 }
