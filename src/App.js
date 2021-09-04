@@ -1,10 +1,12 @@
 import './App.css';
 import Home from "./Components/home";
-import Card from "./Components/card";
+import Menu from "./Components/menu";
+import {BrowserRouter as Router,Route} from 'react-router-dom';
 function App() {
-  return (<div>
-    <Home/>
-     </div>
+  return (<Router>
+    <Route exact path="/" component={Menu}></Route>
+    <Route exact path="/game" component={Home}></Route>
+  </Router>
   );
 }
 
